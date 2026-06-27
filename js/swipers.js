@@ -40,62 +40,55 @@ const services = [
 ];
 
 const reviews = [
-    new Review('Иван Иванов',
-        'Ford Focus',
-        'img/user-ava.png',
-        'Текст отзыва abcdefghijklmnopqrs 1'),
-    new Review('Иван Иванов',
-        'Ford Focus',
-        'img/user-ava.png',
-        'Текст отзыва abcdefghijklmnopqrs 2'),
-    new Review('Иван Иванов',
-        'Ford Focus',
-        'img/user-ava.png',
-        'Текст отзыва abcdefghijklmnopqrs 3'),
-    new Review('Иван Иванов',
-        'Ford Focus',
-        'img/user-ava.png',
-        'Текст отзыва abcdefghijklmnopqrs 4'),
+    new Review('Иван Иванов', 'Ford Focus', 'img/user-ava.png', 'Текст отзыва 1'),
+    new Review('Иван Иванов', 'Ford Focus', 'img/user-ava.png', 'Текст отзыва 2'),
+    new Review('Иван Иванов', 'Ford Focus', 'img/user-ava.png', 'Текст отзыва 3'),
+    new Review('Иван Иванов', 'Ford Focus', 'img/user-ava.png', 'Текст отзыва 4'),
 ];
 
 const container = document.querySelector('[data-services-container]');
 const template = document.querySelector('#service-card-template');
 const listTemplate = document.querySelector('#service-card-list-template');
 
-const fragment = document.createDocumentFragment();
+function renderServices() {
+    const fragment = document.createDocumentFragment();
 
-services.forEach(slideGroup => {
-    const listClone = listTemplate.content.cloneNode(true);
-    const listContainer = listClone.querySelector('.service-card-list');
+    services.forEach(slideGroup => {
+        const listClone = listTemplate.content.cloneNode(true);
+        const listContainer = listClone.querySelector('.service-card-list');
 
-    slideGroup.forEach(item => {
-        const cardClone = template.content.cloneNode(true);
+        slideGroup.forEach(item => {
+            const cardClone = template.content.cloneNode(true);
 
-        cardClone.querySelector('.service-card__title').textContent = item.title;
-        cardClone.querySelector('.service-card__icon').src = item.iconUrl;
-        cardClone.querySelector('.service-card__description').textContent = item.description;
-        cardClone.querySelector('.service-card__price').textContent = `${item.price} ₽`;
+            cardClone.querySelector('.service-card__title').textContent = item.title;
+            cardClone.querySelector('.service-card__icon').src = item.iconUrl;
+            cardClone.querySelector('.service-card__description').textContent = item.description;
+            cardClone.querySelector('.service-card__price').textContent = `${item.price} ₽`;
 
-        listContainer.appendChild(cardClone);
+            listContainer.appendChild(cardClone);
+        });
+
+        fragment.appendChild(listClone);
     });
 
-    fragment.appendChild(listClone);
-});
-
-container.appendChild(fragment);
+    container.appendChild(fragment);
+}
 
 const reviewsContainer = document.querySelector('[data-reviews-container]');
 const reviewTemplate = document.querySelector('#review-card-template');
-reviews.forEach(review => {
-    const clone = reviewTemplate.content.cloneNode(true);
 
-    clone.querySelector('.reviews__author-name').textContent = review.authorName;
-    clone.querySelector('.reviews__car-name').textContent = review.carName;
-    clone.querySelector('.reviews__review-block').textContent = review.text;
-    clone.querySelector('.reviews__author-icon').src = review.authorIconUrl;
+function renderReviews() {
+    reviews.forEach(review => {
+        const clone = reviewTemplate.content.cloneNode(true);
 
-    reviewsContainer.appendChild(clone);
-});
+        clone.querySelector('.reviews__author-name').textContent = review.authorName;
+        clone.querySelector('.reviews__car-name').textContent = review.carName;
+        clone.querySelector('.reviews__review-block').textContent = review.text;
+        clone.querySelector('.reviews__author-icon').src = review.authorIconUrl;
+
+        reviewsContainer.appendChild(clone);
+    });
+}
 
 const servicesSwiper = new Swiper('.our-services .mySwiper', {
     loop: true,
@@ -108,12 +101,11 @@ const servicesSwiper = new Swiper('.our-services .mySwiper', {
         prevEl: '.services-swiper-button-prev',
     },
 });
-servicesSwiper.update();
 
 const reviewsSwiper = new Swiper('.reviews .mySwiper.reviews-swiper', {
     loop: true,
     autoplay: {
-        delay: 8 * 1000,
+        delay: 8000,
     },
     pagination: {
         el: '.swiper-pagination',
@@ -135,4 +127,12 @@ const videoSwiper = new Swiper('.reviews .mySwiper.video-swiper', {
         nextEl: '.video-swiper-button-next',
         prevEl: '.video-swiper-button-prev',
     },
+});
+
+renderServices();
+renderReviews();
+
+requestAnimationFrame(() => {
+    servicesSwiper.update();
+    servicesSwiper.slideTo(0);
 });
