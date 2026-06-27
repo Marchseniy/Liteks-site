@@ -108,6 +108,7 @@ const servicesSwiper = new Swiper('.our-services .mySwiper', {
         prevEl: '.services-swiper-button-prev',
     },
 });
+servicesSwiper.update();
 
 const reviewsSwiper = new Swiper('.reviews .mySwiper.reviews-swiper', {
     loop: true,

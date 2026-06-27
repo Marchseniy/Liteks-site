@@ -47,6 +47,10 @@ section:nth-child(even) {
     padding: 0 15px;
 }
 
+.is-hidden {
+    visibility: hidden;
+}
+
 .accent {
     background-image: linear-gradient(to right, #00c6ff, #0072ff);
     -webkit-background-clip: text;
@@ -268,6 +272,7 @@ section:nth-child(even) {
     height: auto;
     padding: 15px 5px 40px 5px;
     overflow: hidden !important;
+    min-height: 200px;
 }
 
 .swiper-slide {

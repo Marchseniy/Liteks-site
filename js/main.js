@@ -53,7 +53,7 @@ Object.keys(animations).forEach(sectId => {
     animations[sectId].forEach((item) => {
         if (item.elements) {
             item.elements.forEach((element) => {
-                element.style.visibility = 'hidden';
+                element.classList.add('is-hidden');
             });
         }
     });
