@@ -1222,3 +1222,615 @@ section:nth-child(even) {
         gap: 35px;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: 28px !important;
+        word-wrap: break-word;
+    }
+
+    .accent {
+        display: inline-block;
+    }
+}
+
+/* Хедер и герой-блок */
+@media (max-width: 768px) {
+    .hero-block {
+        padding: 0 20px;
+        height: 100vh;
+        min-height: 600px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-block__shadow-for-background {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        opacity: 0.85;
+    }
+
+    .hero-block__main-title {
+        font-size: clamp(22px, 6vw, 36px) !important;
+        text-align: center;
+    }
+
+    .hero-block__content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-block__make-btn {
+        font-size: 16px;
+        padding: 12px 30px;
+        white-space: normal;
+        width: auto;
+        min-width: 200px;
+    }
+
+    .head-wrapper {
+        height: 65px;
+    }
+
+    .head__logo {
+        max-height: 25px;
+    }
+
+    .head__navigation {
+        top: 65px;
+    }
+}
+
+/* Наши услуги */
+@media (max-width: 768px) {
+    .our-services {
+        padding: 40px 0;
+    }
+
+    .our-services::before,
+    .our-services::after {
+        display: none;
+    }
+
+    .our-services__title {
+        margin-bottom: 20px;
+        font-size: 28px !important;
+    }
+
+    .slider-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .service-card-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .service-card {
+        max-width: 100%;
+        height: auto;
+        min-height: 220px;
+        padding: 16px;
+    }
+
+    .service-card__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .service-card__title {
+        font-size: 15px;
+    }
+
+    .service-card__description {
+        font-size: 12px;
+    }
+
+    .service-card__price {
+        font-size: 14px;
+    }
+
+    .services-swiper-button-prev,
+    .services-swiper-button-next {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+    }
+
+    .services-swiper-button-prev {
+        left: 0;
+    }
+    .services-swiper-button-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .service-card {
+        min-height: 190px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .service-card__icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+    }
+
+    .service-card__title {
+        font-size: 13px;
+    }
+
+    .service-card__description {
+        font-size: 11px;
+    }
+
+    .service-card__price {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 370px) {
+    .service-card-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Литэкс - это защита от */
+@media (max-width: 768px) {
+    .liteks-its {
+        padding: 40px 0;
+    }
+
+    .liteks-its::before,
+    .liteks-its::after {
+        display: none;
+    }
+
+    .liteks-its__wrapper {
+        padding: 20px 0;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .liteks-its__title {
+        font-size: 26px !important;
+        margin-bottom: 20px;
+    }
+
+    .liteks-its__circle {
+        width: 200px;
+        height: 200px;
+        gap: 10px;
+        border-width: 4px;
+    }
+
+    .liteks-its__circle::before,
+    .liteks-its__circle::after {
+        display: none;
+    }
+
+    .liteks-its__circle-title {
+        font-size: 14px;
+        gap: 5px;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .liteks-its__circle-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .liteks-its__check-circle-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .liteks-its__horizontal-container {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .liteks-its__vertical-container {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .liteks-its__second-part {
+        padding: 20px 16px;
+        border-radius: 20px;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .liteks-its__second-part::before {
+        display: none;
+    }
+
+    .liteks-its__text {
+        font-size: 16px;
+    }
+
+    .liteks-its__items-list {
+        padding-left: 25px;
+    }
+
+    .liteks-its__item {
+        font-size: 16px;
+    }
+
+    .liteks-its__item::before {
+        width: 8px;
+        height: 8px;
+        left: -18px;
+    }
+}
+
+/* Почему не угоняют */
+@media (max-width: 768px) {
+    .why-liteks {
+        padding: 40px 0;
+    }
+
+    .why-liteks::before {
+        display: none;
+    }
+
+    .why-liteks__wrapper {
+        padding: 0;
+    }
+
+    .why-liteks__title {
+        font-size: 24px !important;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .why-liteks__text {
+        font-size: 16px;
+        text-align: center;
+        display: block;
+    }
+
+    .why-liteks__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .why-liteks__first-part {
+        max-width: 100%;
+    }
+
+    .why-liteks__reasons-list-wrapper {
+        flex-direction: column;
+    }
+
+    .why-liteks__left-offset {
+        width: 0;
+        height: 0;
+    }
+
+    .why-liteks__reasons-list {
+        padding-left: 35px;
+        margin-bottom: 20px;
+    }
+
+    .why-liteks__reasons-item {
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding-left: 5px;
+    }
+
+    .why-liteks__reasons-item::before {
+        left: -35px;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .why-liteks__img-block {
+        max-width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+}
+
+/* Отзывы */
+@media (max-width: 768px) {
+    .reviews {
+        padding: 40px 0;
+    }
+
+    .reviews::before,
+    .reviews::after {
+        display: none;
+    }
+
+    .reviews__wrapper {
+        height: auto;
+        min-height: auto;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .reviews__title {
+        font-size: 28px !important;
+        margin-bottom: 10px;
+    }
+
+    .reviews .slider-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .reviews__item {
+        padding: 0 5px;
+    }
+
+    .reviews__author-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+    }
+
+    .reviews__author-name {
+        font-size: 15px;
+    }
+
+    .reviews__car-name {
+        font-size: 13px;
+    }
+
+    .reviews__review-block {
+        padding: 14px;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+
+    .reviews__video {
+        border-radius: 12px;
+        max-height: 250px;
+    }
+
+    .reviews .slider-wrapper:not(.reviews__first-slider) {
+        max-width: 100%;
+    }
+
+    .reviews__first-slider {
+        margin-bottom: 15px;
+    }
+
+    .reviews-swiper-button-prev,
+    .reviews-swiper-button-next,
+    .video-swiper-button-prev,
+    .video-swiper-button-next {
+        width: 28px;
+        height: 28px;
+    }
+
+    .reviews-swiper-button-prev,
+    .video-swiper-button-prev {
+        left: 0;
+    }
+    .reviews-swiper-button-next,
+    .video-swiper-button-next {
+        right: 0;
+    }
+}
+
+/* Расположение */
+@media (max-width: 768px) {
+    .location {
+        padding: 40px 0;
+    }
+
+    .location__title {
+        font-size: 28px !important;
+        margin-bottom: 15px;
+    }
+
+    .location__address {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .location__map-container {
+        height: 300px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+}
+
+/* Футер */
+@media (max-width: 768px) {
+    .footer {
+        min-height: auto;
+        padding: 15px 0;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .footer__first-part {
+        margin-right: 0;
+    }
+
+    .footer__first-part span {
+        font-size: 12px;
+        display: block;
+    }
+
+    .footer__copyright {
+        margin-bottom: 3px;
+    }
+
+    .footer .contacts-list {
+        gap: 15px;
+    }
+
+    .footer .contacts-list__icon {
+        max-width: 32px;
+        width: 100%;
+    }
+}
+
+/* Модальное окно */
+@media (max-width: 480px) {
+    .modal-window__block {
+        max-width: 95%;
+        padding: 16px;
+        margin: 10px;
+        border-radius: 16px;
+    }
+
+    .modal-window__upper-part {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .modal-window__text {
+        font-size: 16px;
+    }
+
+    .modal-window__contact-methods-item a {
+        font-size: 18px;
+    }
+
+    .modal-window__contact-methods-or-item {
+        font-size: 14px;
+    }
+
+    .modal-window__contact-methods-or-item::before,
+    .modal-window__contact-methods-or-item::after {
+        width: 30px;
+    }
+
+    .modal-window__contact-methods-list {
+        gap: 15px;
+    }
+}
+
+/* Бургер меню */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+        width: 30px;
+        height: 24px;
+    }
+
+    .burger span {
+        height: 2.5px;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .head__navigation {
+        top: 65px;
+        padding: 15px 0;
+    }
+
+    .head__list {
+        gap: 18px;
+    }
+
+    .head__list-item a {
+        font-size: 16px;
+    }
+}
+
+/* Общие фиксы для очень маленьких экранов */
+@media (max-width: 360px) {
+    .hero-block__main-title {
+        font-size: 20px !important;
+    }
+
+    .hero-block__make-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        min-width: 160px;
+    }
+
+    h2 {
+        font-size: 22px !important;
+    }
+
+    .service-card {
+        min-height: 170px;
+        padding: 10px;
+    }
+
+    .liteks-its__circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .liteks-its__circle-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .liteks-its__circle-title {
+        font-size: 12px;
+    }
+
+    .liteks-its__text,
+    .liteks-its__item {
+        font-size: 14px;
+    }
+
+    .why-liteks__reasons-item {
+        font-size: 13px;
+    }
+
+    .location__address {
+        font-size: 14px;
+    }
+
+    .location__map-container {
+        height: 220px;
+    }
+
+    .reviews__review-block {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
