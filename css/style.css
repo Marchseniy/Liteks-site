@@ -1176,6 +1176,11 @@ section:nth-child(even) {
         width: 220px;
         height: 338px;
     }
+
+    .footer .contacts-list__icon {
+        max-width: 30px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 680px) {
