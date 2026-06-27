@@ -169,6 +169,7 @@ section:nth-child(even) {
     cursor: pointer;
     overflow: hidden;
     margin-right: 0;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
