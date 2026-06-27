@@ -1244,7 +1244,6 @@ section:nth-child(even) {
     }
 }
 
-/* Хедер и герой-блок */
 @media (max-width: 768px) {
     .hero-block {
         padding: 0 20px;
@@ -1292,7 +1291,6 @@ section:nth-child(even) {
     }
 }
 
-/* Наши услуги */
 @media (max-width: 768px) {
     .our-services {
         padding: 40px 0;
@@ -1396,7 +1394,6 @@ section:nth-child(even) {
     }
 }
 
-/* Литэкс - это защита от */
 @media (max-width: 768px) {
     .liteks-its {
         padding: 40px 0;
@@ -1489,7 +1486,6 @@ section:nth-child(even) {
     }
 }
 
-/* Почему не угоняют */
 @media (max-width: 768px) {
     .why-liteks {
         padding: 40px 0;
@@ -1560,7 +1556,6 @@ section:nth-child(even) {
     }
 }
 
-/* Отзывы */
 @media (max-width: 768px) {
     .reviews {
         padding: 40px 0;
@@ -1643,7 +1638,6 @@ section:nth-child(even) {
     }
 }
 
-/* Расположение */
 @media (max-width: 768px) {
     .location {
         padding: 40px 0;
@@ -1669,7 +1663,6 @@ section:nth-child(even) {
     }
 }
 
-/* Футер */
 @media (max-width: 768px) {
     .footer {
         min-height: auto;
@@ -1707,7 +1700,6 @@ section:nth-child(even) {
     }
 }
 
-/* Модальное окно */
 @media (max-width: 480px) {
     .modal-window__block {
         max-width: 95%;
@@ -1743,7 +1735,6 @@ section:nth-child(even) {
     }
 }
 
-/* Бургер меню */
 @media (max-width: 768px) {
     .burger {
         display: flex;
@@ -1777,7 +1768,6 @@ section:nth-child(even) {
     }
 }
 
-/* Общие фиксы для очень маленьких экранов */
 @media (max-width: 360px) {
     .hero-block__main-title {
         font-size: 20px !important;
